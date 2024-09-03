@@ -1,0 +1,25 @@
+{
+  "name": "ms-users",
+  "version": "1.0.0",
+  "description": "User microservice for Custodia app",
+  "type": "module",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node --trace-warnings src/index.js",
+    "dev": "nodemon src/index.js"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "dotenv": "^16.1.4",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.2",
+    "pg": "^8.11.0",
+    "uuid": "^10.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  }
+}

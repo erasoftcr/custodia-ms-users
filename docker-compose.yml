@@ -1,0 +1,18 @@
+services:
+  app:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      - DB_HOST=custodia_postgres
+      - DB_USER=custodiauser
+      - DB_NAME=custodiadb
+      - DB_PASSWORD=custodiapw
+      - DB_PORT=5432
+    networks:
+      - custodia_network
+    command: sh -c "node --trace-warnings --trace-uncaught --async-stack-traces src/index.js || tail -f /dev/null"
+
+networks:
+  custodia_network:
+    external: true

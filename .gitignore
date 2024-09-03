@@ -1,0 +1,4 @@
+./configure --prefix=/usr \
+node_modules/
+/.env
+package-lock.json
